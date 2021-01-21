@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
+    <defs>
+        <style>
+            .cls-1{fill:#0a0a0a}
+        </style>
+    </defs>
+    <g id="그룹_1989" transform="translate(-977.574 -8865.673)">
+        <path id="iconmonstr-arrow-29" d="M6.028 0v1.5l4.5 4.5-4.5 4.5V12l6-6z" class="cls-1" transform="rotate(180 497.801 4438.837)"/>
+        <path id="iconmonstr-arrow-29-2" d="M6.028 0v1.5l4.5 4.5-4.5 4.5V12l6-6z" class="cls-1" transform="rotate(180 494.801 4438.837)"/>
+    </g>
+</svg>

@@ -1,0 +1,68 @@
+// CSS Grid layout
+body {
+
+  background-color:#f4f4f4;
+
+  &.over-hidden {
+    overflow: hidden;
+  }
+}
+
+// wrap
+#wrap {
+
+}
+
+.dim {
+  position: fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background-color:rgba(0,0,0,0.8);
+  z-index: 10;
+}
+
+// container
+.container {
+  max-width:1136px;
+  margin:0 auto;
+}
+
+// contents
+#contents {
+  padding:0 0 50px 0;
+
+  // mobile
+  @include mediaQuery($deviceSmall){
+    padding:0 0 30px 0;
+  }
+}
+
+// contents-box
+.contents-box {
+  display:flex;
+  justify-content: space-between;
+  max-width:1136px;
+  margin:35px auto 0;
+  .contents-search-box {
+    width:272px;
+  }
+  .contents-inner {
+    flex:1;
+    position:relative;
+    margin-left:16px;
+  }
+
+  // mobile
+  @include mediaQuery($deviceSmall){
+    display:block;
+    margin-top:0;
+    .contents-search-box {
+      width:100%;
+    }
+    .contents-inner {
+      margin:0;
+    }
+  }
+}

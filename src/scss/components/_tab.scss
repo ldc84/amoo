@@ -1,0 +1,36 @@
+// tab-type-1
+.tab-type-1 {
+  position:relative;
+  display:flex;
+  width:60%;
+  padding:0 0 0 16px;
+  li {
+    width:120px;
+    a {
+      display:block;
+      height:40px;
+      line-height:38px;
+      color:#0a0a0a;
+      font-size:rem(18);
+      border-bottom:4px solid #0a0a0a;
+      text-align:center;
+
+      &.active {
+        color:$color-point-2;
+        font-weight:700;
+        border-color:$color-point-2;
+      }
+    }
+  }
+
+  // mobile
+  @include mediaQuery($deviceSmall){
+    justify-content: center;
+    width:100%;
+    padding:0;
+    border-bottom:2px solid $color-grey;
+    li {
+      margin-bottom:-2px;
+    }
+  }
+}

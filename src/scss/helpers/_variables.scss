@@ -1,0 +1,24 @@
+// Global Sass variables
+
+// font embed :: google webfont
+// @import 'http://fonts.googleapis.com/earlyaccess/notosanskr.css';
+
+// 'Noto Sans KR'
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+// 'Comfortaa'
+@import url('https://fonts.googleapis.com/css?family=Comfortaa&display=swap');
+// 'Montserrat'
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+// fonts
+$font-main: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+$font-size: 100%;
+
+// colors
+$color-text: #0a0a0a;
+$color-code: #eee;
+$color-link: #333;
+$color-point-1: #7a40f2;
+$color-point-2: #ed5152;
+$color-grey: #ebeef3;
