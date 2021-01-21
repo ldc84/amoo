@@ -317,6 +317,8 @@ body {
     background-color: #fff;
     border-radius: 24px;
     outline: none;
+    -webkit-appearance: none;
+            appearance: none;
     transition: all .2s ease-in-out; }
   #header .top-search .btn-del {
     display: none;
@@ -1548,7 +1550,7 @@ input[type='submit'] {
           margin-right: 22px;
           padding-top: 5px; }
           .list-type-1 > li > div .text-box .txt {
-            height: 18px;
+            height: 16px;
             margin-top: 5px;
             -webkit-line-clamp: 1; }
           .list-type-1 > li > div .text-box .user {
@@ -1972,7 +1974,9 @@ input[type='submit'] {
     border: 1px solid #ebeef3;
     border-radius: 20px;
     outline: none;
-    transition: all .2s ease-in-out; }
+    transition: all .2s ease-in-out;
+    -webkit-appearance: none;
+            appearance: none; }
   .search-box > a {
     position: absolute;
     top: 0;
@@ -2110,9 +2114,9 @@ input[type='submit'] {
           display: none; }
         .filter-box .filter-box-inner .m-btn-box-1 {
           position: fixed;
-          bottom: 0;
-          left: 0;
-          right: 0; }
+          bottom: 16px;
+          left: 16px;
+          right: 16px; }
         .filter-box .filter-box-inner.active {
           display: block; } }
 
