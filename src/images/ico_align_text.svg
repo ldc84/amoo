@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="23" height="24" viewBox="0 0 23 24">
+    <g>
+        <text fill="#333" font-family="SegoeUI-Bold, Segoe UI" font-size="18px" font-weight="700" transform="translate(-260 -554) translate(260 573)">
+            <tspan x="0" y="0">Aa</tspan>
+        </text>
+        <path fill="none" stroke="#333" d="M0 0L22 0" transform="translate(-260 -554) translate(260 575)"/>
+    </g>
+</svg>

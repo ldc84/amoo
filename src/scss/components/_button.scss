@@ -50,6 +50,23 @@ input[type='submit'] {
   transition: all ease-in-out 300ms;
   outline: none;
 
+
+  // size
+  &.small-2 {
+    min-width:80px;
+    height:40px;
+    line-height:38px;
+    padding:0 10px;
+    font-size:rem(16);
+  }
+  &.small-3 {
+    min-width:80px;
+    height:32px;
+    line-height:30px;
+    padding:0 20px;
+    font-size:rem(16);
+  }
+
   // color
   &.color-1 {
     color:#fff;
@@ -58,6 +75,16 @@ input[type='submit'] {
       background-color:#c4c4c7;
       opacity: 0.5;
     }
+  }
+
+
+  &.color-4 {
+    color:#fff;
+    background-color:$color-point-2;
+  }
+  &.color-5 {
+    color:#fff;
+    background-color:$color-point-1;
   }
 
   // display
@@ -69,6 +96,12 @@ input[type='submit'] {
   // radius
   &.radius-1 {
     border-radius: 24px;
+  }
+  &.radius-2 {
+    border-radius: 4px;
+  }
+  &.radius-3 {
+    border-radius: 16px;
   }
 
   @include mediaQuery($deviceSmall){
