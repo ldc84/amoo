@@ -183,10 +183,10 @@ legend,
     display: none !important; } }
 
 .mt-1 {
-  margin-top: 20px; }
+  margin-top: 10px; }
 
 .mt-2 {
-  margin-top: 30px; }
+  margin-top: 20px; }
 
 /* Slider */
 .slick-slider {
@@ -457,6 +457,24 @@ body {
       height: 16px;
       background-color: #fff; }
 
+#header .header-title-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+  #header .header-title-box .header-title {
+    padding-right: 0; }
+
+#header .header-title {
+  padding-right: 100px;
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: -1.6px; }
+
+#header .header-title-2 {
+  font-size: 1.125rem;
+  font-weight: 500; }
+
 @media only screen and (max-width: 767px) {
   #header .container {
     justify-content: center;
@@ -514,6 +532,8 @@ body {
       #header .m-menu > span:after {
         top: 6px; }
   #header .top-utill {
+    display: none; }
+  #header .header-title-box {
     display: none; } }
 
 #mobileMenu {
@@ -819,6 +839,10 @@ input[type='submit'] {
   text-align: center;
   transition: all ease-in-out 300ms;
   outline: none; }
+  button[type='button'].button.medium-1,
+  a.button.medium-1,
+  input[type='submit'].medium-1 {
+    padding: 0 36px; }
   button[type='button'].button.small-2,
   a.button.small-2,
   input[type='submit'].small-2 {
@@ -1925,6 +1949,10 @@ input[type='submit'] {
     border-bottom: 2px solid #ebeef3; }
     .tab-type-1.line li {
       margin-bottom: -2px; }
+  .tab-type-1.w100 {
+    width: 100%; }
+  .tab-type-1.two li {
+    width: 50%; }
   @media only screen and (max-width: 767px) {
     .tab-type-1 {
       justify-content: center;
@@ -2941,11 +2969,6 @@ input[type='submit'] {
 #wrap.register #header {
   background-color: #fff;
   border-bottom: 2px solid #ebeef3; }
-  #wrap.register #header .header-title {
-    padding-right: 100px;
-    font-size: 2rem;
-    font-weight: 500;
-    letter-spacing: -1.6px; }
   #wrap.register #header .top-step {
     position: absolute;
     top: 50%;
@@ -3544,5 +3567,239 @@ input[type='submit'] {
         color: #333;
         font-size: 1.125rem;
         font-weight: 500; }
+
+.sign {
+  min-height: 100vh;
+  background-color: #fff; }
+  .sign #header {
+    border-bottom: 2px solid #ebeef3; }
+  .sign #signWrap {
+    padding-top: 100px; }
+    .sign #signWrap .sign-box {
+      max-width: 320px;
+      margin: 0 auto; }
+    .sign #signWrap .sns-box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 40px; }
+      .sign #signWrap .sns-box img {
+        width: 40px; }
+      .sign #signWrap .sns-box a + a {
+        margin-left: 12px; }
+      .sign #signWrap .sns-box .google {
+        display: flex;
+        align-items: center;
+        height: 48px;
+        padding: 0 16px 0 8px;
+        color: #333;
+        font-size: 1.125rem;
+        background-color: #f4f4f4;
+        border-radius: 28px; }
+        .sign #signWrap .sns-box .google img {
+          width: 32px;
+          margin-right: 16px; }
+    .sign #signWrap .text-or {
+      position: relative;
+      margin: 30px 0;
+      color: #333;
+      font-size: 0.875rem;
+      text-align: center; }
+      .sign #signWrap .text-or:before, .sign #signWrap .text-or:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        width: 120px;
+        height: 2px;
+        margin-top: -1px;
+        background-color: #f4f4f4; }
+      .sign #signWrap .text-or:before {
+        left: 0; }
+      .sign #signWrap .text-or:after {
+        right: 0; }
+    .sign #signWrap .sign-input {
+      position: relative;
+      margin-top: 5px;
+      padding: 0 0 16px 0; }
+      .sign #signWrap .sign-input label {
+        color: #333;
+        font-size: 1rem;
+        font-weight: 500; }
+      .sign #signWrap .sign-input input {
+        width: 100%;
+        height: 40px;
+        line-height: 38px;
+        margin-top: 8px;
+        padding: 0 16px 0 16px;
+        font-size: 1rem;
+        border: none;
+        background-color: #f4f4f4;
+        outline: none; }
+      .sign #signWrap .sign-input .error-msg {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        color: #ed5152;
+        font-size: 0.625rem;
+        line-height: 1.5; }
+  .sign .sign-title {
+    text-align: center; }
+    .sign .sign-title h3 {
+      display: inline-block;
+      padding: 0 2px 5px 2px;
+      color: #333;
+      font-size: 2.25rem;
+      font-weight: 500;
+      line-height: 1.2;
+      border-bottom: 2px solid #ed5152; }
+  .sign .sign-text-1 {
+    margin: 15px 0 40px;
+    color: #333;
+    font-size: 1.125rem;
+    line-height: 1.28;
+    text-align: center; }
+    .sign .sign-text-1 strong {
+      color: #ed5152; }
+  .sign .sign-text-2 {
+    margin: 50px 0 0 0;
+    color: #000;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    text-align: center; }
+    .sign .sign-text-2 strong {
+      color: #7a40f2; }
+  .sign .sign-text-3 {
+    margin: 15px 0 70px 0;
+    color: #505050;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: center; }
+  .sign .coment-1 {
+    margin-top: 5px;
+    color: #505050;
+    font-size: 0.875rem;
+    text-align: center; }
+    .sign .coment-1 a {
+      color: #7a40f2; }
+  .sign .coment-2 {
+    margin-top: 8px;
+    color: #505050;
+    font-size: 1rem;
+    text-align: center; }
+    .sign .coment-2 strong {
+      color: #ed5152; }
+    .sign .coment-2 br {
+      display: none; }
+  .sign .coment-3 {
+    margin-top: 8px;
+    color: #333;
+    font-size: 0.875rem;
+    text-align: center; }
+    .sign .coment-3 > span {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      line-height: 16px;
+      margin: -3px 2px 0 0;
+      color: #7a40f2;
+      font-size: 0.875rem;
+      font-weight: 700;
+      border: 2px solid #7a40f2;
+      border-radius: 50%;
+      text-align: center;
+      vertical-align: middle; }
+    .sign .coment-3 > a {
+      margin-left: 10px;
+      color: #7a40f2;
+      font-weight: 500;
+      text-decoration: underline; }
+  .sign .sign-form-box-1 {
+    max-width: 640px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+    border-bottom: 16px solid #ed5152;
+    text-align: center; }
+    .sign .sign-form-box-1 h1 svg {
+      width: 305px;
+      height: auto; }
+    .sign .sign-form-box-1 h1 .cls-1 {
+      fill: #e49884; }
+    .sign .sign-form-box-1 h1 .cls-2 {
+      font-size: 34px;
+      font-family: Comfortaa-Regular,Comfortaa; }
+    .sign .sign-form-box-1 .text-1 {
+      margin-top: 15px;
+      padding: 30px 0 26px 0;
+      color: #fff;
+      font-size: 2rem;
+      font-weight: 500;
+      line-height: 1.2;
+      background-color: #333; }
+    .sign .sign-form-box-1 .text-2 {
+      max-width: 300px;
+      margin: 64px auto 35px;
+      padding: 20px 0 20px 0;
+      color: #333;
+      font-size: 1.125rem;
+      line-height: 1.3;
+      border-top: 1px solid #c0c0c0;
+      border-bottom: 1px solid #c0c0c0; }
+      .sign .sign-form-box-1 .text-2 .txt-1 {
+        font-weight: 700; }
+      .sign .sign-form-box-1 .text-2 .txt-2 {
+        margin-top: 10px; }
+        .sign .sign-form-box-1 .text-2 .txt-2 strong {
+          color: #ed5152;
+          font-weight: 700; }
+    .sign .sign-form-box-1 .text-3 {
+      margin-top: 35px;
+      color: #333;
+      font-size: 0.875rem; }
+  .sign .sign-info-box-1 {
+    padding: 0 0 30px 0;
+    text-align: center; }
+    .sign .sign-info-box-1 .text-email {
+      margin-bottom: 10px;
+      line-height: 1.2; }
+      .sign .sign-info-box-1 .text-email span {
+        display: block;
+        color: #7a40f2;
+        font-size: 0.75rem; }
+      .sign .sign-info-box-1 .text-email strong {
+        display: block;
+        margin-top: 3px;
+        color: #333;
+        font-size: 1.125rem; }
+    .sign .sign-info-box-1 .text-1 {
+      color: #777;
+      font-size: 0.75rem;
+      line-height: 1.5; }
+  @media only screen and (max-width: 767px) {
+    .sign #signWrap {
+      padding-top: 25px; }
+      .sign #signWrap .sns-box {
+        margin-top: 25px; }
+      .sign #signWrap .text-or {
+        margin: 20px 0; }
+      .sign #signWrap .sign-title h3 {
+        font-size: 1.5rem; }
+      .sign #signWrap .sign-text-1 {
+        margin: 10px 60px 20px;
+        font-size: 0.875rem;
+        line-height: 1.43; }
+      .sign #signWrap .sign-text-2 {
+        margin: 30px 0 0 0;
+        font-size: 1.125rem; }
+        .sign #signWrap .sign-text-2 strong {
+          font-size: 1.5rem; }
+      .sign #signWrap .sign-text-3 {
+        margin: 20px 0 70px 0;
+        font-size: 0.875rem; }
+      .sign #signWrap .coment-2 {
+        margin-top: 5px;
+        font-size: 0.875rem; }
+        .sign #signWrap .coment-2 br {
+          display: block; } }
 
 /*# sourceMappingURL=style.css.map */
