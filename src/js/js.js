@@ -175,6 +175,37 @@
 
   });
 
+  // layer
+  $(function(){
+    var body = $('body');
+    var dataElement = body.find('a[data-layer]');
+    var layer = $('.layer');
+    var layerClose = layer.find('.close');
+    var dim = $('<div class="dim"></div>')
+      
+    dataElement.on('click', function(){
+      var target = $(this).data('target');
+
+      layer.before(dim);
+      body.addClass('over-hidden');
+      $('.'+target).addClass('show');
+
+      return false;
+    });
+
+    layerClose.on('click', function(){
+      body.removeClass('over-hidden');
+      layer.removeClass('show');
+      $('.dim').remove();
+      return false;
+    });
+
+    $(document).on('click', '.dim', function(){
+      layerClose.trigger('click');
+    });
+
+  });
+
   // filter
   $(function(){
     var body = $('body');
@@ -209,6 +240,104 @@
       return false;
     });
     
+
+  });
+
+
+  // detail
+  $(function(){
+    var detailHead = $('.detail-head');
+    var detailYoutubeText = detailHead.find('.txt-youtube');
+    var detailYoutubeTextMore = detailYoutubeText.find('.btn-text');
+    var detailWith = $('.detail-with');
+    var tabBtn = detailWith.find('.tab-type-1 a');
+    var withBox = detailWith.find('.with-list-box');
+    var howtoBox = withBox.find('.howto');
+    var howtoList = howtoBox.find('.howto-list');
+    var lessonBox = withBox.find('.lesson');
+    var lessonList = lessonBox.find('.lesson-list > .list-type-4');
+
+    // youtube text toggle
+    detailYoutubeTextMore.on('click', function(){
+      detailYoutubeText.find('> p').toggleClass('active');
+      (detailYoutubeText.find('> p').hasClass('active')) ? detailYoutubeTextMore.text('간략히') : detailYoutubeTextMore.text('더보기') ;
+      return false;
+    });
+
+    // clipboard
+    $('.btn-clipboard').on('click', function(){
+      var timer;
+
+      $('.clipboard-toast').addClass('active');
+      $('#hideCopy').select();
+		  document.execCommand("copy");
+      clearTimeout(timer);
+      timer = setTimeout(function(){
+        $('.clipboard-toast').removeClass('active'); 
+      }, 2000);
+      return false;
+    });
+
+    // tab _ 같이보면좋은강좌
+    tabBtn.on('click', function(){
+      var $this = $(this);
+      var target = $this.data('target');
+
+      tabBtn.removeClass('active');
+      $this.addClass('active');
+
+      $('.'+target).siblings().hide();
+      $('.'+target).fadeIn(250);
+
+      return false;
+    });
+
+    howtoList.slick({
+      arrows: true,
+      dots: false,
+      appendArrows: howtoBox.find('.arrow-box'),
+    });
+
+    lessonList.slick({
+      arrows: true,
+      dots: false,
+      slidesToShow: 4,
+      slidesToScroll: 4,
+      appendArrows: lessonBox.find('.arrow-box'),
+      responsive: [
+        {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            dots: false
+          }
+        },
+      ]
+    });
+    
+    $(window).on('load', function(){
+      $('.visible-hide').removeClass('visible-hide').hide();
+    })
+
+    // layer _ 신고하기
+    var reportList = $('.report-radio-list');
+    var reportRadio = reportList.find('input[type=radio]');
+    var reportTextarea = $('.report-write textarea');
+    var textDefault = '신고하는 항목의 이유를 입력해주세요.\n보다 신속하고 정확한 처리에 도움이 됩니다. (최대 130자)\n';
+    var textChange = [
+      'EX) 결제해야 볼 수 있는 강좌입니다.',
+      'EX) 잘못된 쇼핑몰 사이트로 넘어가네요.',
+      'EX) 자바스크립트 강좌가 포토샵 교육분야에 들어가 있습니다.',
+      'EX) 고급강좌가 초급강좌로 설정되어있습니다.',
+      'EX) 혐오내용을 담고있는 강좌입니다.',
+      'EX) 제가 그린 그림을 무단으로 사용하고 있습니다.',
+      ''
+    ]
+    reportRadio.on('click', function(){
+      var idx = $(this).closest('li').index();
+      reportTextarea.attr('placeholder', textDefault+textChange[idx]);
+    });
 
   });
 

@@ -124,7 +124,7 @@
   /**************** HTML task ****************/
   const htmlConfig = {
     template : dir.src + 'template/*.html',
-    html : dir.src + 'html/**/*.html'
+    html : dir.src + 'html/**/**/**'
   }
 
   function html() {

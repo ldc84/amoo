@@ -170,17 +170,26 @@
   }
   label {
     display:inline-block;
-    height:16px;
-    line-height:16px;
-    padding:0 0 0 27px;
-    color:#000;
-    font-size:rem(10);
-    font-weight:500;
-    background:url("../images/common/form_radio_off.png") no-repeat 0 center;
-    background-size:16px auto;
+    height:20px;
+    line-height:20px;
+    padding:0 0 0 32px;
+    color:#333;
+    font-size:rem(16);
+    background:url("../images/form_radio_off.svg") no-repeat 0 center;
   }
   input[type=radio]:checked + label {
-    background-image:url("../images/common/form_radio_on.png");
+    background-image:url("../images/form_radio_on.svg");
+  }
+
+  // mobile
+  @include mediaQuery($deviceSmall){
+    label {
+      height:16px;
+      line-height:16px;
+      padding:0 0 0 24px;
+      font-size:rem(10);
+      background-size:16px auto;
+    }
   }
 }
 

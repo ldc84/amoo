@@ -184,6 +184,28 @@
     }
   }
 
+  .header-title-box {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    .header-title {
+      padding-right:0;
+    }
+  }
+
+  .header-title {
+    padding-right:100px;
+    font-size:rem(32);
+    font-weight:500;
+    letter-spacing: -1.6px;
+  }
+
+  .header-title-2 {
+    font-size:rem(18);
+    font-weight:500;
+  }
+
   // mobile
   @include mediaQuery($deviceSmall){
     .container {
@@ -257,6 +279,10 @@
       }
     }
     .top-utill {
+      display:none;
+    }
+
+    .header-title-box {
       display:none;
     }
   }

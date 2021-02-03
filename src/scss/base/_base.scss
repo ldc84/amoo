@@ -116,6 +116,9 @@ iframe {
 table {
   border-collapse:collapse;
 }
+textarea {
+  font-family: $font-main;
+}
 
 :not(pre) > code {
   padding: 0.1em 0.3em;
@@ -182,10 +185,22 @@ legend,
   }
 }
 
+.m-only {
+  display:none !important;
+  @include mediaQuery($deviceSmall){
+    display:block !important;
+  }
+}
+.pc-only {
+  @include mediaQuery($deviceSmall){
+    display:none !important;
+  }
+}
+
 // margin
 .mt-1 {
-  margin-top:20px;
+  margin-top:10px;
 }
 .mt-2 {
-  margin-top:30px;
+  margin-top:20px;
 }

@@ -1,15 +1,54 @@
 // title box
 .title-box-1 {
-  
+  position:relative;
+  .sorting-inner {
+    position:absolute;
+    bottom:0;
+    right:0;
+  }
+
+  // mobile
+  @include mediaQuery($deviceSmall){
+    .sorting-inner {
+      position: static;
+      padding:10px 10px 0 0;
+      text-align:right;
+    }
+  }
 }
 
 // title
 .title-type-1 {
-  margin-bottom:8px;
-  color:#1f1d1b;
-  font-size:rem(13);
-  font-weight:700;
+  margin-bottom:15px;
+  color:#333;
+  font-size:rem(36);
+  font-weight:500;
   line-height:1.2;
+  &.center {
+    text-align:center;
+  }
+  &.line {
+    border-bottom:2px solid $color-grey;
+    span {
+      display:inline-block;
+      margin-bottom:-2px;
+      padding-bottom:5px;
+      border-bottom:2px solid $color-point-2;
+    }
+  }
+  &.mb00 {
+    margin-bottom:0;
+  }
+
+  // mobile
+  @include mediaQuery($deviceSmall){
+    &.m-type-1 {
+      font-size:rem(24);
+    }
+    &.m-center {
+      text-align:center;
+    }
+  }
 }
 
 // text
