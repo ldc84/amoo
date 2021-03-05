@@ -86,15 +86,15 @@
     var subtopicList = [];
 
     // top search
-    topic.on('click', function(){
-      var $this = $(this);
-      var $parent = $this.parent('li');
-      var $siblingsA = $parent.siblings('li').find('a');
-      $this.addClass('active');
-      $siblingsA.removeClass('active');
-      subtopic.addClass('show');
-      return false;
-    });
+    // topic.on('click', function(){
+    //   var $this = $(this);
+    //   var $parent = $this.parent('li');
+    //   var $siblingsA = $parent.siblings('li').find('a');
+    //   $this.addClass('active');
+    //   $siblingsA.removeClass('active');
+    //   subtopic.addClass('show');
+    //   return false;
+    // });
 
     // toggleButton
     toggleButton.on('click', function(){
@@ -181,7 +181,8 @@
     var dataElement = body.find('a[data-layer]');
     var layer = $('.layer');
     var layerClose = layer.find('.close');
-    var dim = $('<div class="dim"></div>')
+    var layerClose2 = layer.find('.layer-close');
+    var dim = $('<div class="dim"></div>');
       
     dataElement.on('click', function(){
       var target = $(this).data('target');
@@ -199,9 +200,16 @@
       $('.dim').remove();
       return false;
     });
+    layerClose2.on('click', function(){
+      body.removeClass('over-hidden');
+      layer.removeClass('show');
+      $('.dim').remove();
+      return false;
+    });
 
     $(document).on('click', '.dim', function(){
-      layerClose.trigger('click');
+      if(layerClose) layerClose.trigger('click');
+      if(layerClose2) layerClose2.trigger('click');
     });
 
   });
@@ -337,6 +345,19 @@
     reportRadio.on('click', function(){
       var idx = $(this).closest('li').index();
       reportTextarea.attr('placeholder', textDefault+textChange[idx]);
+    });
+
+  });
+
+  
+  // userpage
+  $(function(){
+    var usertab = $('.user-tab-box');
+    var usertabBtn = usertab.find('> a');
+      
+    usertabBtn.on('click', function(){
+      usertab.toggleClass('active');
+      return false;
     });
 
   });

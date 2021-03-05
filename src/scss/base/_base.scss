@@ -198,9 +198,11 @@ legend,
 }
 
 // margin
-.mt-1 {
-  margin-top:10px;
-}
-.mt-2 {
-  margin-top:20px;
+@for $i from 1 through 10 {
+  .mt-#{$i} {
+    margin-top:#{$i}0px;
+    @include mediaQuery($deviceSmall){
+      margin-top:#{$i/2}0px;
+    }
+  }
 }

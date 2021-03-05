@@ -51,6 +51,31 @@
   }
 }
 
+.title-type-2 {
+  border-bottom:2px solid #ebeef3;
+  @include fontNone;
+  > span {
+    position:relative;
+    display:inline-block;
+    margin-bottom:-2px;
+    padding-bottom:5px;
+    color:#333;
+    font-size:rem(36);
+    font-weight:500;
+    line-height:1.2;
+    border-bottom:2px solid $color-point-2;
+  }
+
+  // mobile
+  @include mediaQuery($deviceSmall){
+    padding:10px 0 0 24px;
+    > span {
+      padding-bottom:3px;
+      font-size:rem(24);
+    }
+  }
+}
+
 // text
 .text-type-1 {
   color:#a5a5a5;

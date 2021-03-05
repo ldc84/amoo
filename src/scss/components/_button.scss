@@ -78,6 +78,14 @@ input[type='submit'] {
     font-size:rem(16);
     font-weight:700;
   }
+  &.small-5 {
+    min-width:160px;
+    height:40px;
+    line-height:38px;
+    padding:0 10px;
+    font-size:rem(18);
+    font-weight:500;
+  }
 
   // color
   &.color-1 {
@@ -97,6 +105,14 @@ input[type='submit'] {
   &.color-5 {
     color:#fff;
     background-color:$color-point-1;
+  }
+  &.color-6 {
+    color:#333;
+    border:1px solid #333;
+  }
+  &.color-7 {
+    color:#333;
+    border:1px solid $color-point-2;
   }
 
   // display

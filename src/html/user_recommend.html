@@ -11,9 +11,9 @@
       <a href="">1.4k 팔로잉</a>
     </p>
     <p class="btn">
-      <a href="">
-        <img src="./images/ico_plus01.svg" alt="">
-        팔로우
+      <a href="" class="active">
+        <img src="./images/ico_check02.svg" alt="">
+        팔로잉
       </a>
     </p>
   </div>
@@ -38,7 +38,7 @@
 <!-- user-tab-box -->
 <div class="user-tab-box">
   <a href="" class="m-only">
-    최근 본 강좌
+    추천 강좌
     <span>
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="4.5" viewBox="0 0 12 4.5">
         <path fill="#fff" d="M6 0l6 4.5H0z" transform="rotate(180 6 2.25)"/>
@@ -46,8 +46,8 @@
     </span>
   </a>
   <ul>
-    <li><a href="" class="active">최근 본 강좌</a></li>
-    <li><a href="">추천 강좌</a></li>
+    <li><a href="">최근 본 강좌</a></li>
+    <li><a href="" class="active">추천 강좌</a></li>
     <li><a href="">등록 강좌</a></li>
     <li><a href="">라이브러리</a></li>
     <li><a href="">팔로잉 라이브러리</a></li>
@@ -59,7 +59,16 @@
 <div class="contents-box">
   
   <!-- contents-search-box -->
-  <div class="contents-search-box type-1">
+  <div class="contents-search-box">
+
+    <div class="search-box">
+      <input type="text" placeholder="카테고리 내 검색">
+      <a href="">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16.002" viewBox="0 0 16 16.002">
+          <path d="M14.865 16a1.129 1.129 0 0 1-.8-.334l-3.3-3.3a6.823 6.823 0 1 1 1.608-1.608l3.3 3.3a1.138 1.138 0 0 1-.8 1.943zM6.823 2.273a4.552 4.552 0 1 0 3.216 1.333 4.515 4.515 0 0 0-3.216-1.333z" transform="translate(-.002)"/>
+        </svg>
+      </a>
+    </div>
     
     <div class="filter-box">
       <p class="title">Filter</p>
@@ -202,13 +211,64 @@
         <img src="./images/ico_filter01.svg" alt="">
         필터
       </a>
+      <p class="sel-sorting">
+        <select>
+          <option value="" selected>추천순</option>
+          <option value="">최신순</option>
+          <option value="">조회순</option>
+        </select>
+      </p>
+      <ul class="sorting">
+        <li><a href="" class="active">추천순</a></li>
+        <li><a href="">최신순</a></li>
+        <li><a href="">조회순</a></li>
+      </ul>
     </div>
     <ul class="tab-type-1">
       <li><a href="" class="active">How-To</a></li>
       <li><a href="">Lesson</a></li>
     </ul>
+    <div class="top-cate-page">
+      <div class="top-caterogy">
+        <ul>
+          <li>
+            <div class="checkbox-2">
+              <input type="checkbox" name="" id="cateChx1">
+              <label for="cateChx1">프로그래밍</label>
+            </div>
+          </li>
+          <li>
+            <div class="checkbox-2">
+              <input type="checkbox" name="" id="cateChx2">
+              <label for="cateChx2">디자인</label>
+            </div>
+          </li>
+          <li>
+            <div class="checkbox-2">
+              <input type="checkbox" name="" id="cateChx3">
+              <label for="cateChx3">비지니스</label>
+            </div>
+          </li>
+          <li>
+            <div class="checkbox-2">
+              <input type="checkbox" name="" id="cateChx4">
+              <label for="cateChx4">마케팅</label>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="top-pagenation">
+        Page
+        <div class="control">
+          <a href=""><img src="./images/ico_arrow_left01.svg" alt=""></a>
+          <input type="text" value="123">
+          <a href=""><img src="./images/ico_arrow_right01.svg" alt=""></a>
+        </div>
+        of 320
+      </div>
+    </div>
     <!-- list-type-1 -->
-    <ul class="list-type-1 mt-6">
+    <ul class="list-type-1">
       <li>
         <div>
           <div class="text-box">
@@ -336,5 +396,40 @@
 
 </div>
 <!-- //contents-box -->
+
+<!-- paging -->
+<div class="paging">
+  <div class="container">
+    <a href="" class="first">
+      <img src="./images/ico_arrow_first01.svg" alt="">
+      <span>처음</span>
+    </a>
+    <a href="" class="prev">
+      <img src="./images/ico_arrow_left01.svg" alt="">
+      <span>Previous</span>
+    </a>
+    <p>
+      <a href="" class="active">01</a>
+      <a href="">02</a>
+      <a href="">03</a>
+      <a href="">04</a>
+      <a href="">05</a>
+      <a href="">06</a>
+      <a href="">07</a>
+      <a href="">08</a>
+      <a href="">09</a>
+      <a href="">10</a>
+    </p>
+    <a href="" class="next">
+      <span>Next</span>
+      <img src="./images/ico_arrow_right01.svg" alt="">
+    </a>
+    <a href="" class="end">
+      <span>끝</span>
+      <img src="./images/ico_arrow_end01.svg" alt="">
+    </a>
+  </div>
+</div>
+<!-- //paging -->
 
 <!-- @@close -->

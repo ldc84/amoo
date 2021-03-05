@@ -158,6 +158,43 @@
   }
 }
 
+.checkbox-2 {
+  display:inline-block;
+  position:relative;
+  input[type=checkbox] {
+    position:absolute;
+    top:0;
+    left:0;
+    opacity:0;
+  }
+  label {
+    position:relative;
+    display:inline-block;
+    height:16px;
+    line-height:16px;
+    padding:0 0 0 24px;
+    color:#0a0a0a;
+    font-size:rem(14);
+    &:before {
+      content:'';
+      position:absolute;
+      top:0;
+      left:0;
+      display:block;
+      width:16px;
+      height:16px;
+      background-color:#dee1e6;
+      border-radius: 3px;;
+      transition: all .2s ease-in-out;
+    }
+  }
+  input[type=checkbox]:checked + label {
+    &:before {
+      background-color:$color-point-2;
+    }
+  }
+}
+
 // radiobox
 .radiobox-1 {
   display:inline-block;

@@ -47,11 +47,21 @@ body {
   margin:35px auto 0;
   .contents-search-box {
     width:272px;
+    &.type-1 {
+      padding-top:40px;
+      @include mediaQuery($deviceSmall){
+        padding-top:0;
+      }
+    }
   }
   .contents-inner {
     flex:1;
     position:relative;
     margin-left:16px;
+  }
+
+  &.contents-only {
+    display:block;
   }
 
   // mobile
