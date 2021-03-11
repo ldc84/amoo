@@ -87,6 +87,14 @@ input[type='submit'] {
     font-weight:500;
   }
 
+  &.xsmall-1 {
+    min-width:80px;
+    height:24px;
+    line-height:22px;
+    padding:0 10px;
+    font-size:rem(13);
+  }
+
   // color
   &.color-1 {
     color:#fff;
@@ -114,6 +122,10 @@ input[type='submit'] {
     color:#333;
     border:1px solid $color-point-2;
   }
+  &.color-8 {
+    color:$color-point-2;
+    border:1px solid $color-point-2;
+  }
 
   // display
   &.block {
@@ -135,6 +147,9 @@ input[type='submit'] {
   }
   &.radius-3 {
     border-radius: 16px;
+  }
+  &.radius-4 {
+    border-radius: 4px;
   }
 
 

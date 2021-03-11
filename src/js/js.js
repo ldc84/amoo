@@ -354,10 +354,51 @@
   $(function(){
     var usertab = $('.user-tab-box');
     var usertabBtn = usertab.find('> a');
-      
+    var titleSns = $('.contents-title .ico-box .ico.sns');
+    var titleSnsBtn = titleSns.find('> .btn-sns');
+    var libraryEdit = $('.library-edit-box');
+    var libraryEditBtn = libraryEdit.find('> .btn-list-modify');
+    var libraryCheckAll = libraryEdit.find('> .check-all');
+    var libraryList = libraryEdit.siblings('.my-modify');
+    
+    // mobile tab
     usertabBtn.on('click', function(){
       usertab.toggleClass('active');
       return false;
+    });
+
+    // 라이브러리 공유 toggle
+    titleSnsBtn.on('click', function(){
+      titleSns.toggleClass('active');
+      return false;
+    });
+
+    // 리스트편집 toggle
+    libraryEditBtn.on('click', function(){
+      libraryEdit.toggleClass('active');
+      libraryList.toggleClass('check');
+      return false;
+    });
+
+    // 전체선택/해제
+    libraryCheckAll.on('click', function(){
+      libraryCheckAll.toggleClass('checked');
+      var allChx = libraryCheckAll.hasClass('checked') ? true : false ;
+
+      libraryList.find('> li').each(function(){
+        var $this = $(this);
+        $this.find('.check input[type=checkbox]').prop('checked', allChx);
+      });
+      return false;
+    });
+
+    // 일부 선택 해제
+    $(document).on("click", ".my-modify .check input[type=checkbox]", function () {
+      var is_checked = true;
+      $(".my-modify .check input[type=checkbox]").each(function(){
+        is_checked = is_checked && $(this).is(":checked");
+      });
+      is_checked ? libraryCheckAll.addClass('checked') : libraryCheckAll.removeClass('checked') ;
     });
 
   });
