@@ -1264,30 +1264,32 @@ input[type='submit'] {
       .layer .layer-wrap .report-write ::placeholder {
         color: #909090;
         font-weight: 300; }
-  .layer.layer-library-edit .layer-wrap {
+  .layer.layer-library-edit .layer-wrap, .layer.layer-library-save .layer-wrap, .layer.layer-library-move .layer-wrap {
     background-color: #fff; }
-    .layer.layer-library-edit .layer-wrap .title-box h2 {
+    .layer.layer-library-edit .layer-wrap .title-box h2, .layer.layer-library-save .layer-wrap .title-box h2, .layer.layer-library-move .layer-wrap .title-box h2 {
       height: 40px;
       line-height: 38px;
       font-size: 1.5rem; }
-    .layer.layer-library-edit .layer-wrap .layer-contents {
+    .layer.layer-library-edit .layer-wrap .title-box .coment, .layer.layer-library-save .layer-wrap .title-box .coment, .layer.layer-library-move .layer-wrap .title-box .coment {
+      margin-top: -3px; }
+    .layer.layer-library-edit .layer-wrap .layer-contents, .layer.layer-library-save .layer-wrap .layer-contents, .layer.layer-library-move .layer-wrap .layer-contents {
       padding: 24px 16px;
       background-color: #f4f4f4; }
-      .layer.layer-library-edit .layer-wrap .layer-contents .library-edit {
+      .layer.layer-library-edit .layer-wrap .layer-contents .library-edit, .layer.layer-library-save .layer-wrap .layer-contents .library-edit, .layer.layer-library-move .layer-wrap .layer-contents .library-edit {
         padding: 20px 19px 16px 19px;
         background-color: #fff;
         text-align: left; }
-        .layer.layer-library-edit .layer-wrap .layer-contents .library-edit + .library-edit {
+        .layer.layer-library-edit .layer-wrap .layer-contents .library-edit + .library-edit, .layer.layer-library-save .layer-wrap .layer-contents .library-edit + .library-edit, .layer.layer-library-move .layer-wrap .layer-contents .library-edit + .library-edit {
           margin-top: 16px; }
-        .layer.layer-library-edit .layer-wrap .layer-contents .library-edit .tit {
+        .layer.layer-library-edit .layer-wrap .layer-contents .library-edit .tit, .layer.layer-library-save .layer-wrap .layer-contents .library-edit .tit, .layer.layer-library-move .layer-wrap .layer-contents .library-edit .tit {
           color: #333;
           font-size: 1.125rem;
           font-weight: 500;
           line-height: 1.2; }
-        .layer.layer-library-edit .layer-wrap .layer-contents .library-edit .in-box {
+        .layer.layer-library-edit .layer-wrap .layer-contents .library-edit .in-box, .layer.layer-library-save .layer-wrap .layer-contents .library-edit .in-box, .layer.layer-library-move .layer-wrap .layer-contents .library-edit .in-box {
           position: relative;
           padding: 8px 0; }
-          .layer.layer-library-edit .layer-wrap .layer-contents .library-edit .in-box textarea {
+          .layer.layer-library-edit .layer-wrap .layer-contents .library-edit .in-box textarea, .layer.layer-library-save .layer-wrap .layer-contents .library-edit .in-box textarea, .layer.layer-library-move .layer-wrap .layer-contents .library-edit .in-box textarea {
             width: 100%;
             height: 64px;
             padding: 10px 12px;
@@ -1295,22 +1297,181 @@ input[type='submit'] {
             font-size: 1rem;
             line-height: 1.4;
             border-radius: 4px; }
-          .layer.layer-library-edit .layer-wrap .layer-contents .library-edit .in-box .leng {
+          .layer.layer-library-edit .layer-wrap .layer-contents .library-edit .in-box .leng, .layer.layer-library-save .layer-wrap .layer-contents .library-edit .in-box .leng, .layer.layer-library-move .layer-wrap .layer-contents .library-edit .in-box .leng {
             position: absolute;
             top: -10px;
             right: 0;
             color: #333;
             font-size: 0.813rem;
             line-height: 1.2; }
-        .layer.layer-library-edit .layer-wrap .layer-contents .library-edit .btn01 {
+        .layer.layer-library-edit .layer-wrap .layer-contents .library-edit .btn01, .layer.layer-library-save .layer-wrap .layer-contents .library-edit .btn01, .layer.layer-library-move .layer-wrap .layer-contents .library-edit .btn01 {
           text-align: right; }
-        .layer.layer-library-edit .layer-wrap .layer-contents .library-edit .text-del {
+        .layer.layer-library-edit .layer-wrap .layer-contents .library-edit .text-del, .layer.layer-library-save .layer-wrap .layer-contents .library-edit .text-del, .layer.layer-library-move .layer-wrap .layer-contents .library-edit .text-del {
           display: flex;
           justify-content: space-between;
           align-items: center; }
-          .layer.layer-library-edit .layer-wrap .layer-contents .library-edit .text-del > p {
+          .layer.layer-library-edit .layer-wrap .layer-contents .library-edit .text-del > p, .layer.layer-library-save .layer-wrap .layer-contents .library-edit .text-del > p, .layer.layer-library-move .layer-wrap .layer-contents .library-edit .text-del > p {
             color: #ed5152;
             font-size: 1rem; }
+      .layer.layer-library-edit .layer-wrap .layer-contents .library-save-titlebox, .layer.layer-library-save .layer-wrap .layer-contents .library-save-titlebox, .layer.layer-library-move .layer-wrap .layer-contents .library-save-titlebox {
+        position: relative;
+        padding: 0 0 0 14px; }
+        .layer.layer-library-edit .layer-wrap .layer-contents .library-save-titlebox:before, .layer.layer-library-save .layer-wrap .layer-contents .library-save-titlebox:before, .layer.layer-library-move .layer-wrap .layer-contents .library-save-titlebox:before {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          width: 6px;
+          background-color: #333;
+          border-radius: 5px; }
+        .layer.layer-library-edit .layer-wrap .layer-contents .library-save-titlebox .tit, .layer.layer-library-save .layer-wrap .layer-contents .library-save-titlebox .tit, .layer.layer-library-move .layer-wrap .layer-contents .library-save-titlebox .tit {
+          height: 56px;
+          padding: 4px 120px 4px 16px;
+          color: #0a0a0a;
+          font-size: 1.125rem;
+          font-weight: 500;
+          line-height: 1.1;
+          background-color: #fff;
+          border-radius: 2px;
+          text-align: left; }
+        .layer.layer-library-edit .layer-wrap .layer-contents .library-save-titlebox .image, .layer.layer-library-save .layer-wrap .layer-contents .library-save-titlebox .image, .layer.layer-library-move .layer-wrap .layer-contents .library-save-titlebox .image {
+          position: absolute;
+          top: 1px;
+          right: 8px;
+          width: 96px;
+          height: 54px;
+          overflow: hidden; }
+          .layer.layer-library-edit .layer-wrap .layer-contents .library-save-titlebox .image img, .layer.layer-library-save .layer-wrap .layer-contents .library-save-titlebox .image img, .layer.layer-library-move .layer-wrap .layer-contents .library-save-titlebox .image img {
+            width: 96px;
+            height: 54px;
+            object-fit: cover; }
+          .layer.layer-library-edit .layer-wrap .layer-contents .library-save-titlebox .image .leng, .layer.layer-library-save .layer-wrap .layer-contents .library-save-titlebox .image .leng, .layer.layer-library-move .layer-wrap .layer-contents .library-save-titlebox .image .leng {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.8); }
+            .layer.layer-library-edit .layer-wrap .layer-contents .library-save-titlebox .image .leng > p, .layer.layer-library-save .layer-wrap .layer-contents .library-save-titlebox .image .leng > p, .layer.layer-library-move .layer-wrap .layer-contents .library-save-titlebox .image .leng > p {
+              color: #fff;
+              font-size: 1.125rem;
+              line-height: 1.1; }
+      .layer.layer-library-edit .layer-wrap .layer-contents .library-save-listbox, .layer.layer-library-save .layer-wrap .layer-contents .library-save-listbox, .layer.layer-library-move .layer-wrap .layer-contents .library-save-listbox {
+        height: 456px;
+        margin: 16px 0 0 0;
+        padding: 20px 16px 10px 16px;
+        background-color: #fff;
+        border-radius: 8px;
+        overflow-x: hidden;
+        overflow-y: auto; }
+        .layer.layer-library-edit .layer-wrap .layer-contents .library-save-listbox > ul > li, .layer.layer-library-save .layer-wrap .layer-contents .library-save-listbox > ul > li, .layer.layer-library-move .layer-wrap .layer-contents .library-save-listbox > ul > li {
+          min-height: 40px;
+          margin-top: 8px;
+          border: 1px solid #ebeef3;
+          background-color: #fff;
+          border-radius: 4px; }
+          .layer.layer-library-edit .layer-wrap .layer-contents .library-save-listbox > ul > li:first-child, .layer.layer-library-save .layer-wrap .layer-contents .library-save-listbox > ul > li:first-child, .layer.layer-library-move .layer-wrap .layer-contents .library-save-listbox > ul > li:first-child {
+            margin-top: 0; }
+          .layer.layer-library-edit .layer-wrap .layer-contents .library-save-listbox > ul > li .check-in, .layer.layer-library-save .layer-wrap .layer-contents .library-save-listbox > ul > li .check-in, .layer.layer-library-move .layer-wrap .layer-contents .library-save-listbox > ul > li .check-in {
+            position: relative;
+            text-align: left; }
+            .layer.layer-library-edit .layer-wrap .layer-contents .library-save-listbox > ul > li .check-in input[type=checkbox], .layer.layer-library-save .layer-wrap .layer-contents .library-save-listbox > ul > li .check-in input[type=checkbox], .layer.layer-library-move .layer-wrap .layer-contents .library-save-listbox > ul > li .check-in input[type=checkbox] {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              opacity: 0; }
+            .layer.layer-library-edit .layer-wrap .layer-contents .library-save-listbox > ul > li .check-in label, .layer.layer-library-save .layer-wrap .layer-contents .library-save-listbox > ul > li .check-in label, .layer.layer-library-move .layer-wrap .layer-contents .library-save-listbox > ul > li .check-in label {
+              display: block;
+              line-height: 38px;
+              padding: 0 70px 0 16px;
+              color: #000;
+              font-size: 0.875rem;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis; }
+              .layer.layer-library-edit .layer-wrap .layer-contents .library-save-listbox > ul > li .check-in label span, .layer.layer-library-save .layer-wrap .layer-contents .library-save-listbox > ul > li .check-in label span, .layer.layer-library-move .layer-wrap .layer-contents .library-save-listbox > ul > li .check-in label span {
+                position: absolute;
+                top: 4px;
+                right: 16px;
+                display: block;
+                width: 32px;
+                height: 32px;
+                line-height: 30px;
+                border: 2px solid #333;
+                border-radius: 16px;
+                text-align: center; }
+                .layer.layer-library-edit .layer-wrap .layer-contents .library-save-listbox > ul > li .check-in label span svg, .layer.layer-library-save .layer-wrap .layer-contents .library-save-listbox > ul > li .check-in label span svg, .layer.layer-library-move .layer-wrap .layer-contents .library-save-listbox > ul > li .check-in label span svg {
+                  width: 16px; }
+                  .layer.layer-library-edit .layer-wrap .layer-contents .library-save-listbox > ul > li .check-in label span svg path, .layer.layer-library-save .layer-wrap .layer-contents .library-save-listbox > ul > li .check-in label span svg path, .layer.layer-library-move .layer-wrap .layer-contents .library-save-listbox > ul > li .check-in label span svg path {
+                    fill: #333; }
+            .layer.layer-library-edit .layer-wrap .layer-contents .library-save-listbox > ul > li .check-in input[type=checkbox]:checked + label, .layer.layer-library-save .layer-wrap .layer-contents .library-save-listbox > ul > li .check-in input[type=checkbox]:checked + label, .layer.layer-library-move .layer-wrap .layer-contents .library-save-listbox > ul > li .check-in input[type=checkbox]:checked + label {
+              background-color: #ebeef3; }
+              .layer.layer-library-edit .layer-wrap .layer-contents .library-save-listbox > ul > li .check-in input[type=checkbox]:checked + label span, .layer.layer-library-save .layer-wrap .layer-contents .library-save-listbox > ul > li .check-in input[type=checkbox]:checked + label span, .layer.layer-library-move .layer-wrap .layer-contents .library-save-listbox > ul > li .check-in input[type=checkbox]:checked + label span {
+                border-color: #ed5152; }
+                .layer.layer-library-edit .layer-wrap .layer-contents .library-save-listbox > ul > li .check-in input[type=checkbox]:checked + label span svg path, .layer.layer-library-save .layer-wrap .layer-contents .library-save-listbox > ul > li .check-in input[type=checkbox]:checked + label span svg path, .layer.layer-library-move .layer-wrap .layer-contents .library-save-listbox > ul > li .check-in input[type=checkbox]:checked + label span svg path {
+                  fill: #ed5152; }
+          .layer.layer-library-edit .layer-wrap .layer-contents .library-save-listbox > ul > li.list-add > a, .layer.layer-library-save .layer-wrap .layer-contents .library-save-listbox > ul > li.list-add > a, .layer.layer-library-move .layer-wrap .layer-contents .library-save-listbox > ul > li.list-add > a {
+            display: block;
+            height: 38px;
+            line-height: 36px;
+            color: #333;
+            font-size: 1rem; }
+            .layer.layer-library-edit .layer-wrap .layer-contents .library-save-listbox > ul > li.list-add > a span, .layer.layer-library-save .layer-wrap .layer-contents .library-save-listbox > ul > li.list-add > a span, .layer.layer-library-move .layer-wrap .layer-contents .library-save-listbox > ul > li.list-add > a span {
+              position: relative;
+              display: inline-block;
+              width: 14px;
+              height: 14px;
+              margin: -4px 4px 0 0;
+              vertical-align: middle; }
+              .layer.layer-library-edit .layer-wrap .layer-contents .library-save-listbox > ul > li.list-add > a span:before, .layer.layer-library-edit .layer-wrap .layer-contents .library-save-listbox > ul > li.list-add > a span:after, .layer.layer-library-save .layer-wrap .layer-contents .library-save-listbox > ul > li.list-add > a span:before, .layer.layer-library-save .layer-wrap .layer-contents .library-save-listbox > ul > li.list-add > a span:after, .layer.layer-library-move .layer-wrap .layer-contents .library-save-listbox > ul > li.list-add > a span:before, .layer.layer-library-move .layer-wrap .layer-contents .library-save-listbox > ul > li.list-add > a span:after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: #333; }
+              .layer.layer-library-edit .layer-wrap .layer-contents .library-save-listbox > ul > li.list-add > a span:before, .layer.layer-library-save .layer-wrap .layer-contents .library-save-listbox > ul > li.list-add > a span:before, .layer.layer-library-move .layer-wrap .layer-contents .library-save-listbox > ul > li.list-add > a span:before {
+                width: 14px;
+                height: 2px; }
+              .layer.layer-library-edit .layer-wrap .layer-contents .library-save-listbox > ul > li.list-add > a span:after, .layer.layer-library-save .layer-wrap .layer-contents .library-save-listbox > ul > li.list-add > a span:after, .layer.layer-library-move .layer-wrap .layer-contents .library-save-listbox > ul > li.list-add > a span:after {
+                width: 2px;
+                height: 14px; }
+          .layer.layer-library-edit .layer-wrap .layer-contents .library-save-listbox > ul > li.list-add .list-add-write, .layer.layer-library-save .layer-wrap .layer-contents .library-save-listbox > ul > li.list-add .list-add-write, .layer.layer-library-move .layer-wrap .layer-contents .library-save-listbox > ul > li.list-add .list-add-write {
+            padding: 10px 16px; }
+            .layer.layer-library-edit .layer-wrap .layer-contents .library-save-listbox > ul > li.list-add .list-add-write textarea, .layer.layer-library-save .layer-wrap .layer-contents .library-save-listbox > ul > li.list-add .list-add-write textarea, .layer.layer-library-move .layer-wrap .layer-contents .library-save-listbox > ul > li.list-add .list-add-write textarea {
+              width: 100%;
+              height: 64px;
+              padding: 10px 12px 5px;
+              color: #333;
+              font-size: 1rem;
+              line-height: 1.2;
+              border-color: #333;
+              border-radius: 4px; }
+            .layer.layer-library-edit .layer-wrap .layer-contents .library-save-listbox > ul > li.list-add .list-add-write .btn-leng, .layer.layer-library-save .layer-wrap .layer-contents .library-save-listbox > ul > li.list-add .list-add-write .btn-leng, .layer.layer-library-move .layer-wrap .layer-contents .library-save-listbox > ul > li.list-add .list-add-write .btn-leng {
+              display: flex;
+              justify-content: space-between; }
+              .layer.layer-library-edit .layer-wrap .layer-contents .library-save-listbox > ul > li.list-add .list-add-write .btn-leng .leng, .layer.layer-library-save .layer-wrap .layer-contents .library-save-listbox > ul > li.list-add .list-add-write .btn-leng .leng, .layer.layer-library-move .layer-wrap .layer-contents .library-save-listbox > ul > li.list-add .list-add-write .btn-leng .leng {
+                color: #333;
+                font-size: 0.813rem;
+                line-height: 1.2; }
+      .layer.layer-library-edit .layer-wrap .layer-contents .library-save-search, .layer.layer-library-save .layer-wrap .layer-contents .library-save-search, .layer.layer-library-move .layer-wrap .layer-contents .library-save-search {
+        position: relative;
+        height: 56px;
+        padding: 20px 0 16px 0; }
+        .layer.layer-library-edit .layer-wrap .layer-contents .library-save-search .search-box, .layer.layer-library-save .layer-wrap .layer-contents .library-save-search .search-box, .layer.layer-library-move .layer-wrap .layer-contents .library-save-search .search-box {
+          max-width: 272px;
+          margin: 0 auto; }
+        .layer.layer-library-edit .layer-wrap .layer-contents .library-save-search > a, .layer.layer-library-save .layer-wrap .layer-contents .library-save-search > a, .layer.layer-library-move .layer-wrap .layer-contents .library-save-search > a {
+          position: absolute;
+          top: 20px;
+          right: 0; }
   .layer.layer-sm .layer-wrap {
     width: 420px; }
   .layer.show {
@@ -1365,13 +1526,41 @@ input[type='submit'] {
         .layer .layer-wrap .report-write ::placeholder {
           color: #909090;
           font-weight: 300; }
-    .layer.layer-library-edit .layer-wrap .layer-contents .library-edit {
+    .layer.layer-library-edit .layer-wrap .layer-contents .library-edit, .layer.layer-library-save .layer-wrap .layer-contents .library-edit, .layer.layer-library-move .layer-wrap .layer-contents .library-edit {
       padding: 20px 16px 16px 16px; }
-      .layer.layer-library-edit .layer-wrap .layer-contents .library-edit .text-del {
+      .layer.layer-library-edit .layer-wrap .layer-contents .library-edit .text-del, .layer.layer-library-save .layer-wrap .layer-contents .library-edit .text-del, .layer.layer-library-move .layer-wrap .layer-contents .library-edit .text-del {
         display: block;
         padding: 8px 0 0 0; }
-        .layer.layer-library-edit .layer-wrap .layer-contents .library-edit .text-del > p {
-          padding-bottom: 10px; } }
+        .layer.layer-library-edit .layer-wrap .layer-contents .library-edit .text-del > p, .layer.layer-library-save .layer-wrap .layer-contents .library-edit .text-del > p, .layer.layer-library-move .layer-wrap .layer-contents .library-edit .text-del > p {
+          padding-bottom: 10px; }
+    .layer.layer-library-edit .layer-wrap .layer-contents .library-save-titlebox, .layer.layer-library-save .layer-wrap .layer-contents .library-save-titlebox, .layer.layer-library-move .layer-wrap .layer-contents .library-save-titlebox {
+      padding: 0; }
+      .layer.layer-library-edit .layer-wrap .layer-contents .library-save-titlebox:before, .layer.layer-library-save .layer-wrap .layer-contents .library-save-titlebox:before, .layer.layer-library-move .layer-wrap .layer-contents .library-save-titlebox:before {
+        display: none; }
+      .layer.layer-library-edit .layer-wrap .layer-contents .library-save-titlebox .tit, .layer.layer-library-save .layer-wrap .layer-contents .library-save-titlebox .tit, .layer.layer-library-move .layer-wrap .layer-contents .library-save-titlebox .tit {
+        display: -webkit-box;
+        padding: 6px 110px 4px 10px;
+        line-height: 1.3;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        text-overflow: ellipsis; }
+    .layer.layer-library-edit .layer-wrap .layer-contents .library-save-listbox, .layer.layer-library-save .layer-wrap .layer-contents .library-save-listbox, .layer.layer-library-move .layer-wrap .layer-contents .library-save-listbox {
+      height: 300px;
+      margin: 8px 0 0 0;
+      padding: 10px 6px 6px 6px; }
+      .layer.layer-library-edit .layer-wrap .layer-contents .library-save-listbox > ul > li .check-in label, .layer.layer-library-save .layer-wrap .layer-contents .library-save-listbox > ul > li .check-in label, .layer.layer-library-move .layer-wrap .layer-contents .library-save-listbox > ul > li .check-in label {
+        padding: 0 60px 0 6px; }
+      .layer.layer-library-edit .layer-wrap .layer-contents .library-save-listbox > ul > li.list-add .list-add-write, .layer.layer-library-save .layer-wrap .layer-contents .library-save-listbox > ul > li.list-add .list-add-write, .layer.layer-library-move .layer-wrap .layer-contents .library-save-listbox > ul > li.list-add .list-add-write {
+        padding: 5px 6px; }
+        .layer.layer-library-edit .layer-wrap .layer-contents .library-save-listbox > ul > li.list-add .list-add-write textarea, .layer.layer-library-save .layer-wrap .layer-contents .library-save-listbox > ul > li.list-add .list-add-write textarea, .layer.layer-library-move .layer-wrap .layer-contents .library-save-listbox > ul > li.list-add .list-add-write textarea {
+          padding: 5px 6px 3px;
+          font-size: 0.875rem; }
+    .layer.layer-library-edit .layer-wrap .layer-contents .library-save-search, .layer.layer-library-save .layer-wrap .layer-contents .library-save-search, .layer.layer-library-move .layer-wrap .layer-contents .library-save-search {
+      padding: 10px 95px 0 0; }
+      .layer.layer-library-edit .layer-wrap .layer-contents .library-save-search .search-box, .layer.layer-library-save .layer-wrap .layer-contents .library-save-search .search-box, .layer.layer-library-move .layer-wrap .layer-contents .library-save-search .search-box {
+        margin: 0 auto 0 0; }
+      .layer.layer-library-edit .layer-wrap .layer-contents .library-save-search > a, .layer.layer-library-save .layer-wrap .layer-contents .library-save-search > a, .layer.layer-library-move .layer-wrap .layer-contents .library-save-search > a {
+        top: 10px; } }
 
 .tb-data-1 table {
   width: 100%;
